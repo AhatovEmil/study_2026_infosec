@@ -1,0 +1,235 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+  ignorenonframetext,
+  aspectratio=169,
+  russian,
+]{beamer}
+\newif\ifbibliography
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% remove section numbering
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{section title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{subsection title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\usetheme[]{metropolis}
+\usefonttheme{serif} % use mainfont rather than sansfont for slide text
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[Ligatures=TeX]{PT Serif}
+  \setsansfont[Ligatures=TeX,Scale=MatchLowercase]{PT Sans}
+  \setmonofont[Scale=MatchLowercase,Scale=0.9]{PT Mono}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off,provide=*]{babel}
+\else
+\usepackage[bidi=default,shorthands=off,provide=*]{babel}
+\fi
+\ifPDFTeX
+\else
+\babelfont{rm}[Ligatures=TeX]{PT Serif}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\metroset{progressbar=frametitle,sectionpage=progressbar,numbering=fraction}
+\makeatletter
+\beamer@ignorenonframefalse
+\makeatother
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Презентация по лабораторной работе №1},
+  pdfauthor={Ахатов Э.Э.},
+  pdflang={ru-RU},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{\texorpdfstring{Презентация по лабораторной работе
+№1}{Презентация по лабораторной работе №1}}
+\subtitle{\texorpdfstring{Основы информационной
+безопасности}{Основы информационной безопасности}}
+\author{\texorpdfstring{Ахатов Э.Э.}{Ахатов Э.Э.}}
+\date{16 февраля 2026}
+\institute{Российский университет дружбы народов, Москва, Россия}
+
+\begin{document}
+\frame{\titlepage}
+
+\section{Информация}\label{ux438ux43dux444ux43eux440ux43cux430ux446ux438ux44f}
+
+\begin{frame}{Докладчик}
+\protect\phantomsection\label{ux434ux43eux43aux43bux430ux434ux447ux438ux43a}
+\begin{columns}[c]
+\end{columns}
+
+\begin{itemize}
+\tightlist
+\item
+  Ахатов Эмиль Эрнстович
+\item
+  студентка группы НКАбд-04-24
+\item
+  Российский университет дружбы народов
+\end{itemize}
+
+::: :::
+
+::: ::::::::::::::
+\end{frame}
+
+\begin{frame}{Цель}
+\protect\phantomsection\label{ux446ux435ux43bux44c}
+Целью данной работы является приобретение практических навыков установки
+операционной системы на виртуальную машину, настройки ми- нимально
+необходимых для дальнейшей работы сервисов.
+\end{frame}
+
+\begin{frame}{Задание}
+\protect\phantomsection\label{ux437ux430ux434ux430ux43dux438ux435}
+\begin{enumerate}
+\tightlist
+\item
+  Установка и настройка операционной системы.
+\item
+  Найти следующую информацию:
+
+  \begin{enumerate}
+  \tightlist
+  \item
+    Версия ядра Linux (Linux version).
+  \item
+    Частота процессора (Detected Mhz processor).
+  \item
+    Модель процессора (CPU0).
+  \item
+    Объем доступной оперативной памяти (Memory available).
+  \item
+    Тип обнаруженного гипервизора (Hypervisor detected).
+  \item
+    Тип файловой системы корневого раздела.
+  \end{enumerate}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Выполнение лабораторной работы}
+\protect\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b}
+Я создал новую виртуальную машину, выделил 8гб оперативной памяти, 4
+ядра процессора и максимальное колличество видеопамяти,40 гб дискового
+пространства,выбрал окружение средства разработки в дополнительном
+програмном обеспечении, отключил kdump.Так как этот процесс полностью
+повторяется с прошлым курсом,я не видел необходимости скриншотить каждый
+шаг.
+\end{frame}
+
+\section{Выполнение дополнительного
+задания}\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux434ux43eux43fux43eux43bux43dux438ux442ux435ux43bux44cux43dux43eux433ux43e-ux437ux430ux434ux430ux43dux438ux44f}
+
+\begin{frame}{1}
+\protect\phantomsection\label{section}
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={окно терминала}]{image/1.png}}
+\caption{окно терминала}
+\end{figure}
+\end{frame}
+
+\begin{frame}{2}
+\protect\phantomsection\label{section-1}
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={окно терминала}]{image/2.png}}
+\caption{окно терминала}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Вывод}
+\protect\phantomsection\label{ux432ux44bux432ux43eux434}
+Я приобрел практические навыки установки операционной системы на
+виртуальную машину, настройки ми- нимально необходимых для дальнейшей
+работы сервисов.
+
+:::
+\end{frame}
+
+\end{document}
